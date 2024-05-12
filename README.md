@@ -20,7 +20,7 @@ function spawnGimmighoul(form) {
 }
 ```  
 
-The purpose of "-1" is uncertain, it may respawn all missing gimmighoul of that form however it is so rare it is practically impossible to verify it.  
+The purpose of "-1" is uncertain, it may respawn all missing gimmighoul of that form (as in the pseudocode above), however it is so rare it is practically impossible to verify it.  
 ### How did you find out?
 With a lot of experiments and time, luck also helped a couple of times.  
 Initially I simply wanted to understand if the respawn attempt was run once per real day or once per in-game day. Both hypothesis were incompatible with my results so I kept investigating it.  
@@ -35,6 +35,8 @@ Notice that the attempts occur *shortly after* midnight/loading, not immediately
   
 The day-night cycle stops when you enter the Switch home menu or while the console is in standby, as a consequence leaving the game in standby for a long time will not result in any additional spawn attempts.  
 The in-game day lasts 72 minutes. See [serebii's guide](https://www.serebii.net/scarletviolet/daynightcycle.shtml) for the details.  
+### "Double" spawn attempts
+If you load the game shortly before the in-game midnight *and* at least one Paldea day has passed from the last save two spawn attempts will occur within a short time.  
 ### Does the spawn attempt occur while the player is in another map (area zero, dlc regions...)?
 I don't know yet. It can be tested but it takes some time.  
 
@@ -43,3 +45,6 @@ It still takes a lot of effort and time to collect 999 coins. The data and text 
 The most important part is that you can:  
 + easily force respawn attempts by saving, closing the game and moving the console clock forward
 + estimate approximately how many roaming form and chest form were respawned after a certain number of respawn attempts (and therefore when it is worth collecting coins)
+  
+  
+If you want to farm coins more quickly make sure to collect the roaming form (not only the chest form), on average about 80% of the respawned coins come from this form.
