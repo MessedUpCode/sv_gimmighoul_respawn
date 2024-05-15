@@ -21,6 +21,7 @@ function spawnGimmighoul(form) {
 ```  
 
 The purpose of "-1" is uncertain, it may respawn all missing gimmighoul of that form (as in the pseudocode above), however it is so rare it is practically impossible to verify it.  
+
 ### How did you find out?
 With a lot of experiments and time, luck also helped a couple of times.   
 Initially I simply wanted to understand if the respawn attempt was run once per real day or once per in-game day. Both hypothesis were incompatible with my results so I kept investigating it.  
@@ -54,16 +55,20 @@ The procedure would involve the following steps:
 Now you have two likely outcomes:  
 + If all of the places are filled with gimmighoul then the respawn attempts probably did occur in the other map, run the test a second time to make sure it was not an extremely rare occurrence of the "-1", also helps if you made any mistake.
 + If you find that none respawned or the respawned amount matches a number from the "QuantityData" table then the spawn attempts did not occur on the other map, only one was triggered when going back to Paldea. To be sure repeat the test a second time. 
-
+## Coins obtained from each gimmighoul
+This part has been well documented by others and is properly explained on several guides (see for example serebii's page).
+Every time you interact with a gimmighoul (except for the first time, see below) you will get a random number of coins picked from the "NumData" tables that you can find in Anibis' tweet, with the largest having low probabilities of occurring. Restarting the game will not change the amount of coins, meaning that it is already set before your interaction (possibly even before the spawn occurs).  
+  
+Note that the first time you interact with a specific gimmighoul the amount of coins you will get is not decided by the "NumData" table, it is probably a predefined value specific to that particular gimmighoul. That particular amount of coins may not appear in the corresponding table, for example you may obtain 4 coins from a roaming form instead of 1, 3, 5, 10...  
 ## Does this help me to farm gimmighoul coins quickly?
-It still takes a lot of effort and time to collect 999 coins. The data in the jupyter notebook can help you making the farming process more reliable but it won't be quick.  
-The most important part is that you can:  
-+ easily force respawn attempts by saving, closing the game and moving the console clock forward
-+ concentrate on places that are fast to reach and/or have many gimmighoul close to each other, ignore gimmighoul in places that take too long to reach. As long as there are enough free spots to fill, the algorithm will respawn the same amount of gimmighoul so you are not "wasting" respawn chances by getting that particular chest or roaming that takes a minute to reach. (You can use serebii's Paldea map to plan a route)
-+ estimate approximately how many roaming form and chest form will be respawned after a certain number of respawn attempts (and therefore decide when it is worth collecting coins, avoid looking for them when probably only a few have respawned).  
+**It still takes a lot of effort and time** to collect 999 coins. The data in the jupyter notebook can help you making the farming process more reliable but it won't be quick.  
+If you are looking for something rare to trade with other players I would recommend shiny hunting instead (not the gimmighoul of course, on top of the terrible spawn rates they are also shiny locked): with the shiny charm, a lvl 3 sparkling power sandwich and some knowledge of the strategies you can catch a couple of shinies of your choice in the time it takes to respawn and collect enough coins to evolve a single gimmighoul (even when taking into account that it takes time to find two herba mystica).  
+If you really want another gholdengo and are struggling to get enough coins here are a few key points:  
++ you can easily force respawn attempts by saving, closing the game and moving the console clock forward
++ instead of collecting coins from anywhere, concentrate on places that are fast to reach and/or have many gimmighoul close to each other (paths that quickly lead from one to the next are also good), avoid gimmighoul in places that take too long to reach (e.g. a single roaming on top of a mountain, far from any quick travel destination is a terrible waste of time). As long as there are enough free spots to fill, the algorithm will respawn the same amount of gimmighoul so you are not "wasting" respawn chances. (You can use serebii's Paldea map to plan a route)
++ you can estimate approximately how many roaming form and chest form will be respawned after a certain number of respawn attempts (and therefore decide when it is worth collecting coins, avoid looking for them when probably only a few have respawned).  
++ Collect coins from both forms, the roaming form may yield less coins per gimmighoul but they respawn more often and in large quantities. On average about 80% of the respawned coins come from this form.  
   
-  
-If you want to farm coins more quickly make sure to also collect the roaming form (not only the chest form), they may yield less coins per gimmighoul but they respawn more often and in large quantities. On average about 80% of the respawned coins come from this form.
 ## Experimental evidence
 Over time I will write a description of the experiments that led me to this conclusion.  
 
