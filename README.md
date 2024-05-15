@@ -38,27 +38,34 @@ The in-game day lasts 72 minutes. See [serebii's guide](https://www.serebii.net/
 ### "Double" spawn attempts
 If you load the game shortly before the in-game midnight *and* at least one Paldea day has passed from the last save two spawn attempts will occur within a short time.  
 For example if you save _before_ 4:48 (end of a Paldea day), close, load the game at 5:59 (1 minute before the next Paldea day) a respawn attempt will occur shortly after loading then another in-game day will start (at 6:00) and a second respawn attempt will occur within a minute.  
+### Respawned gimmighoul not appearing
+If you are near a free place while a spawn attempt occur the game may still respawn a gimmighoul in that location, however you won't be able to see, hear or interact with it. To make it visible and collect the coins move far from it then go back and it will be there.  
+
 ### Does the spawn attempt occur while the player is in another map (area zero, dlc regions...)?
 I don't know yet. It can be tested but it takes time.  
 The procedure would involve the following steps:
 + respawn all roaming form
 + collect coins from at least 21 specific roaming form locations, write down the locations or take a screenshot to remember where they are. This step must be done in a single Paldea day to be certain not to respawn any of them.
-+ move to the map to test (for example Kitakami) and repeat several times the procedure to force respawn attempts.
-+ go back to paldea during the day and check all locations before midnight.  
++ move to the map to test (for example Kitakami) and repeat several times the procedure to force respawn attempts (you should pick a number that will give you something like a >95% probability to fill all respawn locations, remember that 50% of the respawn attempt will just fail).
++ go back to Paldea during the day and check all locations before midnight.  
   
-If all places are filled with gimmighoul then the respawn attempts probably did occur in the other map, run the test a second time to make sure it was not a rare occurrence of the "-1". If none or only an amount from the "QuantityData" then the spawn attempts did not occur on the other map, only one was triggered when going back to Paldea. 
+(even if the spawn attempts did not occur while on the other map a single spawn attempt may still occur when returning to Paldea).  
+  
+Now you have two likely outcomes:  
++ If all of the places are filled with gimmighoul then the respawn attempts probably did occur in the other map, run the test a second time to make sure it was not an extremely rare occurrence of the "-1", also helps if you made any mistake.
++ If you find that none respawned or the respawned amount matches a number from the "QuantityData" table then the spawn attempts did not occur on the other map, only one was triggered when going back to Paldea. To be sure repeat the test a second time. 
 
 ## Does this help me to farm gimmighoul coins quickly?
-It still takes a lot of effort and time to collect 999 coins. The data in the jupyter notebook can help you making the farming process more reliable but it will still take time.  
+It still takes a lot of effort and time to collect 999 coins. The data in the jupyter notebook can help you making the farming process more reliable but it won't be quick.  
 The most important part is that you can:  
 + easily force respawn attempts by saving, closing the game and moving the console clock forward
-+ concentrate on places that are fast to reach and/or have many gimmighoul close to each other, ignore gimmighoul in places that take too long to reach. As long as there are enough free spots to fill, the algorithm will respawn the same amount of gimmighoul so you are not "wasting" respawn chances by getting that particular chest that takes a minute to reach. (You can use serebii's Paldea map to plan a route)
-+ estimate approximately how many roaming form and chest form will be respawned after a certain number of respawn attempts (and therefore decide when it is worth collecting coins/avoid looking for them when only a few have respawned).  
++ concentrate on places that are fast to reach and/or have many gimmighoul close to each other, ignore gimmighoul in places that take too long to reach. As long as there are enough free spots to fill, the algorithm will respawn the same amount of gimmighoul so you are not "wasting" respawn chances by getting that particular chest or roaming that takes a minute to reach. (You can use serebii's Paldea map to plan a route)
++ estimate approximately how many roaming form and chest form will be respawned after a certain number of respawn attempts (and therefore decide when it is worth collecting coins, avoid looking for them when probably only a few have respawned).  
   
   
 If you want to farm coins more quickly make sure to also collect the roaming form (not only the chest form), they may yield less coins per gimmighoul but they respawn more often and in large quantities. On average about 80% of the respawned coins come from this form.
 ## Experimental evidence
-Over time I will write a description of the experiments that led me to this conclusion. Right now the list is not complete.  
+Over time I will write a description of the experiments that led me to this conclusion.  
 
 ### Chest respawns not matching the expected amount 
 If you try to read some posts (on reddit and forums) about gimmighoul spawns you will find people that are certain that the respawn occurs once every real day and other that are certain that the respawn occurs once every in-game day. My initial plan was to find out which one of the two was correct.  
