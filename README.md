@@ -1,5 +1,6 @@
 # Gimmighoul respawn mechanics
-Based on [data from Anubis](https://twitter.com/Sibuna_Switch/status/1594002939450126338) and personal research.
+Based on [data from Anubis](https://twitter.com/Sibuna_Switch/status/1594002939450126338) and personal research.  
+This is only about scarlet and violet (not go).
 
 ## Common misunderstanding of the respawn mechanics
 The error in the common idea is that when a respawn attempt occurs **each** missing gimmighoul has a chance of being respawned (5% for the chest form, 50% for the roaming form). The respawn algorithm however is a bit different.  
